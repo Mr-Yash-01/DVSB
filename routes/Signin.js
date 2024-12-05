@@ -13,15 +13,14 @@ router.post('/', async (req, res) => {
             return res.status(500).json({ message: "Contract methods are not properly initialized" });
         }
 
+        
         // Interact with the smart contract to verify admin
         const result = await sendContract.verifyAdmin(email, password);
 
         // If the result is a transaction, wait for deployment (confirm the transaction)
         if (result && result.wait) {
             await result.wait();  // Wait for the transaction to be mined
-        } else {
-            console.log("Admin verified, no deployment required.");
-        }
+        } 
 
         // Respond with a success message and the result from the contract call
         return res.status(200).json({ message: "Signin successful", result });
