@@ -11,7 +11,7 @@ const app = express();
 
 // Define allowed origins for production
 const allowedOrigins = [
-  'https://decentralized-voting-system-backend.onrender.com', // Replace with your frontend deployment URL
+  'https://dvsb.onrender.com' , // Replace with your frontend deployment URL
 ];
 
 // Configure CORS
