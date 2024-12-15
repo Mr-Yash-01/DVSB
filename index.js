@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const connectDB = require('./config/db'); // MongoDB connection
+const connectDB = require('./config/Db'); // MongoDB connection
 const signinRouter = require('./routes/Signin');
 const signupRouter = require('./routes/Signup');
 const dashboardRouter = require('./routes/Dashboard');
